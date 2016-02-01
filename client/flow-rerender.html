@@ -1,0 +1,22 @@
+<head>
+  <title>flow-rerender</title>
+</head>
+
+<body>
+    <a href="/foo/1">Foo 1</a>
+    <a href="/bar/2">Bar 2</a><br>
+    <a href="/foo/2">Foo 2</a>
+    <a href="/bar/1">Bar 1</a> With bad ids
+</body>
+
+<template name="Layout">
+    {{>Template.dynamic template=template}}
+</template>
+
+<template name="Foo">
+    Foo: {{foo}}
+</template>
+
+<template name="Bar">
+    Bar: {{bar}}
+</template>
